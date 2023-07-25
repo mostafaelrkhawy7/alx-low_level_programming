@@ -4,23 +4,22 @@
  * @dest: input value
  * @src: input value
  * @n: input value
- *
  * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int j;
+	int y;
 
-	j = 0;
-	while (j < n && src[j] != '\0')
+	y = 0;
+	while (y < n && src[y] != '\0')
 	{
-		dest[j] = src[j];
-		j++;
+		dest[y] = src[y];
+		y++;
 	}
-	while (j < n)
+	while (y < n)
 	{
-		dest[j] = '\0';
-		j++;
+		dest[y] = '\0';
+		y++;
 	}
 
 	return (dest);
