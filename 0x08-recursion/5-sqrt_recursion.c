@@ -7,7 +7,7 @@
 int square_root(int n, int x); 
 int _sqrt_recursion(int n)
 {
-    return (square_root(n, 1))
+    return (square_root(n, 1));
 }
 /**
  * square_root - recurses to find the natural
