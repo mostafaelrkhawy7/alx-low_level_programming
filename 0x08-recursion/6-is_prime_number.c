@@ -3,6 +3,7 @@
 /**
  * is_prime_number - check if an integer is a prime number or not
  * @n: number
+ * @r: othernum
  * Return: 1 if n is a prime number, 0 if not
  */
 int prime_check(int n, int r);
