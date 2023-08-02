@@ -17,11 +17,12 @@ int _sqrt_recursion(int n)
  *
  * Return: the resulting square root
  */
-int square_root(int n, int x)
+int square_root(int n, int i)
 {
-	if (x * x > n)
-		return (-1);
-	if (x * x == n)
-		return (x);
-	return (square_root(n, x + 1));
+    if (i * i == n)
+        return (i);
+    if (i * i < n)
+        return (square_root(n, i + 1));
+    else
+        return (-1);
 }
