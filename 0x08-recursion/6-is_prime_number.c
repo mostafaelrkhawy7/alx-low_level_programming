@@ -14,7 +14,7 @@ int is_prime_number(int n)
 /**
  * prime_check - check if a number is prime
  * @n: number
- *
+ * @r: othernum
  * Return: 1 if n is prime, 0 if not
  */
 int prime_check(int n, int r)
