@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+
 /**
  * main - prints sum 
  * @argc: number of arguments
