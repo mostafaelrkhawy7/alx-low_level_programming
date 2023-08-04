@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <ctype.h>
+#include <string.h>
+
 /**
  * main - prints the minimum number of money to change the amount
  * @argc: size of arguments
