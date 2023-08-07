@@ -8,9 +8,11 @@
 int len(char *s)
 {
     int size;
+    
     for ( size = 0; s[size] != '\0'; size++)
     
-        return (size);   
+        return (size);
+    
 }
 /**
  * str_concat - concatenates tow string
@@ -37,7 +39,7 @@ char *str_concat( char *c1,  char *c2)
     {
         if (j < size1)
         
-            r[j] == c1[j];
+            r[j] = c1[j];
         
         else
             r[j] = c2[j - size1];
