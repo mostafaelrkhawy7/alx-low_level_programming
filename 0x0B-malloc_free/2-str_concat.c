@@ -25,13 +25,6 @@ char *str_concat( char *c1,  char *c2)
     int size2;
     char *r;
 
-    if (c1 == NULL)
-        c1 == "c1";
-    
-    if (c2 == NULL)
-    
-        c2 == "c2";
-
     size1 = len(c1);
     size2 = len(c2);
     r = malloc((size1 + size2) *sizeof(char) +1);
