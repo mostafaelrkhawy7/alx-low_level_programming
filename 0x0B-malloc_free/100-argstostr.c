@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * len - find lenght
  * @s: string
@@ -35,7 +36,7 @@ char *argstostr(int ac, char **av)
     
         v += len(av[x]);
     
-    s = malloc((v +1)*sizeof(*s));
+    s = malloc((v +1)*sizeof(char));
     if (s == 0)
     
         return (NULL);
