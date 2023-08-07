@@ -9,8 +9,8 @@ int len(char *s)
 {
     int size;
     
-    for ( size = 0; s[size] != '\0'; size++);
-    
+    for ( size = 0; s[size] != '\0'; size++)
+        ;
         return (size);
     
 }
