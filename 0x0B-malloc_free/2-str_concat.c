@@ -17,8 +17,7 @@ int len(char *s)
  * str_concat - concatenates tow string
  * @c1: string1 
  * @c2: string2
- * @r: char 
- * Return : pointer from concatenation
+ * Return: pointer from concatenation
 */
 char *str_concat( char *c1,  char *c2)
 {
