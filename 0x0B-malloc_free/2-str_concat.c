@@ -11,8 +11,7 @@ int len(char *s)
     
     for ( size = 0; s[size] != '\0'; size++)
         ;
-        return (size);
-    
+        return (size);  
 }
 /**
  * str_concat - concatenates tow string
