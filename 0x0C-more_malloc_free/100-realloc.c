@@ -2,47 +2,49 @@
 #include "main.h"
 
 /**
- * *string_nconcat - concatenates n bytes of a string to another string
- * @s1: string 
- * @s2: string 
- * @n: number of bytes 
+ * *_realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer 
+ * @old_size: size of the allocated memory 
+ * @new_size: size of the new memory block
  *
- * Return: pointer
+ * Return: pointer to the newly allocated memory block
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *s;
-	unsigned int x = 0;
-	int y = 0;
-	int len1 = 0;
-	int len2 = 0;
+	char *p;
+	char *p1;
+	unsigned int x;
 
-	while (s1 && s1[len1])
-		len1++;
-	while (s2 && s2[len2])
-		len2++;
+	if (new_size == old_size)
+		return (ptr);
 
-	if (n < len2)
-		s = malloc(sizeof(char) * (len1 + n + 1));
-	else
-		s = malloc(sizeof(char) * (len1 + len2 + 1));
-
-	if (!s)
-		return (NULL);
-
-	while (x < len1)
+	if (new_size == 0 && ptr)
 	{
-		s[x] = s1[x];
-		x++;
+		free(ptr);
+		return (NULL);
 	}
 
-	while (n < len2 && x < (len1 + n))
-		s[x++] = s2[y++];
+	if (!ptr)
+		return (malloc(new_size));
 
-	while (n >= len2 && x < (len1 + len2))
-		s[x++] = s2[y++];
+	p = malloc(new_size);
+	if (!p)
+		return (NULL);
 
-	s[x] = '\0';
+	p1 = ptr;
 
-	return (s);
+	if (new_size < old_size)
+	{
+		for (x = 0; x < new_size; x++)
+			p1[x] = p1[x];
+	}
+
+	if (new_size > old_size)
+	{
+		for (x = 0; x < old_size; x++)
+			p[x] = p1[x];
+	}
+
+	free(ptr);
+	return (p);
 }
