@@ -2,26 +2,26 @@
 #include "main.h"
 
 /**
- * *string_nconcat - concatenates 2 string
- * @s1: string
- * @s2: string
- * @n: number of bytes (int)
+ * *string_nconcat - concatenates n bytes of a string to another string
+ * @s1: string 
+ * @s2: string 
+ * @n: number of bytes 
  *
  * Return: pointer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-    int x = 0;
-    int y = 0;
-    int len1 = 0;
-    int len2 = 0;
+	unsigned int x = 0;
+	int y = 0;
+	int len1 = 0;
+	int len2 = 0;
 
 	while (s1 && s1[len1])
 		len1++;
 	while (s2 && s2[len2])
 		len2++;
-	
+
 	if (n < len2)
 		s = malloc(sizeof(char) * (len1 + n + 1));
 	else
