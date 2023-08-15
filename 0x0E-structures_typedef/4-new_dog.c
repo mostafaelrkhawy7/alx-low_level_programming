@@ -43,24 +43,24 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog1;
+	dog_t *pobby;
 	//check for name of owner and age less zan zero or not
 	if ( name == NULL || owner == NULL || age < 0)
 		return (NULL);
-	new_dog1 = (dog_t *) malloc(sizeof(dog_t));
+	pobby = (dog_t *) malloc(sizeof(dog_t));
 	//allocate memory for struct
-	if (new_dog1 == NULL)
+	if (pobby == NULL)
 		return (NULL);
-	new_dog1->name = malloc(sizeof (char) * (_strlen(name) +1));
-	if ((*new_dog1).name == NULL)
+	pobby->name = malloc(sizeof (char) * (_strlen(name) +1));
+	if ((*pobby).name == NULL)
 	{
-		free(new_dog1);
+		free(pobby);
 		return (NULL);
 	}
 
-	new_dog1->name = _strcopy(d->name, name);
-	new_dog1->age = age;
-	new_dog1->owner = _strcopy(d->owner, owner);
+	pobby->name = _strcopy(pobby->name, name);
+	pobby->age = age;
+	pobby->owner = _strcopy(pobby->owner, owner);
 
-	return (new_dog1);
+	return (pobby);
 }
