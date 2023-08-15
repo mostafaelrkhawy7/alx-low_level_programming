@@ -57,10 +57,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(poppy);
 		return (NULL);
 	}
-	poppy->owner = malloc(sizeof(char) * (_starlen(owner) +1));
+	poppy->owner = malloc(sizeof(char) * (_strlen(owner) +1));
 	if ((*poppy).owner == NULL)
 	{
-		free(poppy->name)
+		free(poppy->name);
 		free(poppy);
 		return (NULL);
 	}	
