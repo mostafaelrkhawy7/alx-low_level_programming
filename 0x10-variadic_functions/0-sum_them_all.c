@@ -10,18 +10,18 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list ap;
+	va_list p;
 	unsigned int x, s = 0;
 
 	if (n == 0) 
 		return (0);
 		
-	va_start(ap, n);
+	va_start(p, n);
 
 	for (x = 0; x < n; x++)
-		s += va_arg(ap, int);
+		s += va_arg(p, int);
 
-	va_end(ap);
+	va_end(p);
 
 	return (s);
 }
