@@ -8,12 +8,12 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-//If size <= 0, array = NULL , cmp = NULL return -1
+/*If size <= 0, array = NULL , cmp = NULL return -1*/
 	if (array == NULL || size <= 0 || cmp == NULL)
 		return (-1);
 
 	int x;
-//int x returns the index of the first element for which the cmp function does not return 0	
+/*int x returns the index of the first element for which the cmp function does not return 0	*/
 	for (x = 0; x < size; x++)
 	{
 		if (cmp(array[x]))
