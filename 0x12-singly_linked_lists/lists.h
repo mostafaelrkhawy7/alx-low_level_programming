@@ -3,17 +3,17 @@
 
 /**
  * struct list_s - singly linked list
- * @s: string
- * @length: length
- * @fourword: next node
+ * @str: string 
+ * @len: length 
+ * @next: next node
  *
  * Description: singly linked list
  */
 typedef struct list_s
 {
-	char *s;
+	char *str;
 	unsigned int length;
-	struct list_s *fourword;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
