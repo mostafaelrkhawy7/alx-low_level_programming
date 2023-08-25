@@ -3,28 +3,27 @@
 #include "lists.h"
 
 /**
- * add_node - adds node to linked list
+ * add_node - adds a new node
  * @head: double pointer
- * @str: string 
+ * @str: new string
  *
- * Return: address, or NULL when fails
+ * Return: address , or NULL if fails
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node;
+	list_t *n;
 	unsigned int length = 0;
 
 	while (str[length])
 		length++;
 
-	new_node = malloc(sizeof(list_t));
-	if (new_node = '\0')
+	new = malloc(sizeof(list_t));
+	if (!n)
 		return (NULL);
 
-	new_node->str = strdup(str);
-	new_node->length = length;
-	new_node->fourword = (*head);
-	(*head) = new_node;
+	n->str = strdup(str);
+	n->length = length;
+	n->next = (*head);
+	(*head) = n;
 
 	return (*head);
-}
