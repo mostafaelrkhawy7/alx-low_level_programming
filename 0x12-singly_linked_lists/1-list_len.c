@@ -5,7 +5,7 @@
  * list_len - number of elements in list
  * @h: pointer
  *
- * Return: number of elements in the pointer
+ * Return: number of elements in pointer
  */
 size_t list_len(const list_t *h)
 {
@@ -14,7 +14,7 @@ size_t list_len(const list_t *h)
 	while (h)
 	{
 		num++;
-		h = h->fourword;
+		h = h->next;
 	}
 	return (num);
 }
