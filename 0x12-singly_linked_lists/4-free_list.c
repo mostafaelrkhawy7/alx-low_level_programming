@@ -3,7 +3,7 @@
 
 /**
  * free_list - frees list
- * @head: list  to free
+ * @head: list to free
  */
 void free_list(list_t *head)
 {
@@ -11,8 +11,8 @@ void free_list(list_t *head)
 
 	while (head)
 	{
-		tmp = head->fourword;
-		free(head->s);
+		tmp = head->next;
+		free(head->str);
 		free(head);
 		head = tmp;
 	}
